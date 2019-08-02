@@ -1,5 +1,5 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -11,17 +11,26 @@ public class ScriptPlayer : MonoBehaviour
     public bool trabajandoBool;
     public bool slowedDown;
 
+    public Player currentPlayer;
 
     private void Update()
     {
-        if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)
+        switch (currentPlayer)
         {
-            myNav.Move(new Vector3(Input.GetAxisRaw("Horizontal") * velocidad,0, Input.GetAxisRaw("Vertical") * velocidad));
-        }
-
-        if (Input.GetKeyUp(KeyCode.O))
-        {
-            SlowDown(0.5f);
+            case Player.Player_1:
+                if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
+                {
+                    myNav.Move(new Vector3((-Convert.ToInt32(Input.GetKey(KeyCode.A)) + Convert.ToInt32(Input.GetKey(KeyCode.D))) * velocidad, 0, (-Convert.ToInt32(Input.GetKey(KeyCode.S)) + Convert.ToInt32(Input.GetKey(KeyCode.W))) * velocidad));
+                }
+                break;
+            case Player.Player_2:
+                if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.RightArrow))
+                {
+                    myNav.Move(new Vector3((-Convert.ToInt32(Input.GetKey(KeyCode.LeftArrow)) + Convert.ToInt32(Input.GetKey(KeyCode.RightArrow))) * velocidad, 0, (-Convert.ToInt32(Input.GetKey(KeyCode.DownArrow)) + Convert.ToInt32(Input.GetKey(KeyCode.UpArrow))) * velocidad));
+                }
+                break;
+            default:
+                break;
         }
     }
 
@@ -55,6 +64,17 @@ public class ScriptPlayer : MonoBehaviour
             StartCoroutine("SlowDownCoroutine", slowFactor);
             Debug.Log("SLOWED BITCH!");
         }
+    }
+
+    public void SetPlayer(Player p)
+    {
+        currentPlayer = p;
+    }
+
+    public enum Player
+    {
+        Player_1,
+        Player_2
     }
 
     IEnumerator SlowDownCoroutine(float slowF)
