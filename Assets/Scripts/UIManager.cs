@@ -41,11 +41,14 @@ public class UIManager : MonoBehaviour
     private void Start()
     {
         m_timer = new GameTimer();
+
+        InitTimer(90);
     }
 
     private void Update()
     {
         m_timer.UpdateTimer();
+        m_timerText.text = ((int)m_timer.GetTime()).ToString();
     }
 
     /// <summary>
@@ -149,8 +152,13 @@ public class UIManager : MonoBehaviour
         {
             if (m_playing)
             {
-                m_time -= Time.deltaTime; 
+                m_time -= Time.deltaTime;
             }
+        }
+
+        public float GetTime()
+        {
+            return m_time;
         }
     }
 }
