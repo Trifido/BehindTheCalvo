@@ -400,7 +400,7 @@ GameObject:
   - component: {fileID: 4213661629169423522}
   m_Layer: 0
   m_Name: Chair_003
-  m_TagString: Untagged
+  m_TagString: Asiento
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1096,7 +1096,7 @@ GameObject:
   - component: {fileID: 6627356646739400418}
   m_Layer: 0
   m_Name: Chair_002
-  m_TagString: Untagged
+  m_TagString: Asiento
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1328,7 +1328,7 @@ GameObject:
   - component: {fileID: 7374244482898569169}
   m_Layer: 0
   m_Name: Chair
-  m_TagString: Untagged
+  m_TagString: Asiento
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1946,7 +1946,7 @@ GameObject:
   - component: {fileID: 6240519249102633137}
   m_Layer: 0
   m_Name: Chair_001
-  m_TagString: Untagged
+  m_TagString: Asiento
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295

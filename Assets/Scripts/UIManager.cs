@@ -67,6 +67,44 @@ public class UIManager : MonoBehaviour
     }
 
     /// <summary>
+    /// Sets score to a player specified
+    /// </summary>
+    /// <param name="player"></param>
+    /// <param name="score"></param>
+    public void SetPlayerScore(Enumerations.Player player, float score)
+    {
+        switch (player)
+        {
+            case Enumerations.Player.Player1:
+                SetPlayer1Score(score);
+                break;
+
+            case Enumerations.Player.Player2:
+                SetPlayer2Score(score);
+                break;
+        }
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="player"></param>
+    /// <param name="addition"></param>
+    //public void AddScoreToPlayer(Enumerations.Player player, float addition)
+    //{
+    //    switch (player)
+    //    {
+    //        case Enumerations.Player.Player1:
+    //            SetPlayer1Score(score + addition);
+    //            break;
+
+    //        case Enumerations.Player.Player2:
+    //            SetPlayer2Score(score + addition);
+    //            break;
+    //    }
+    //}
+
+    /// <summary>
     /// Sets both players scores
     /// </summary>
     /// <param name="score1"></param>
