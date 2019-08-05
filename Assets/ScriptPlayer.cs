@@ -11,19 +11,19 @@ public class ScriptPlayer : MonoBehaviour
     public bool trabajandoBool;
     public bool slowedDown;
 
-    public Player currentPlayer;
+    public Enumerations.Player currentPlayer;
 
     private void Update()
     {
         switch (currentPlayer)
         {
-            case Player.Player_1:
+            case Enumerations.Player.Player1:
                 if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
                 {
                     myNav.Move(new Vector3((-Convert.ToInt32(Input.GetKey(KeyCode.A)) + Convert.ToInt32(Input.GetKey(KeyCode.D))) * velocidad, 0, (-Convert.ToInt32(Input.GetKey(KeyCode.S)) + Convert.ToInt32(Input.GetKey(KeyCode.W))) * velocidad));
                 }
                 break;
-            case Player.Player_2:
+            case Enumerations.Player.Player2:
                 if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.RightArrow))
                 {
                     myNav.Move(new Vector3((-Convert.ToInt32(Input.GetKey(KeyCode.LeftArrow)) + Convert.ToInt32(Input.GetKey(KeyCode.RightArrow))) * velocidad, 0, (-Convert.ToInt32(Input.GetKey(KeyCode.DownArrow)) + Convert.ToInt32(Input.GetKey(KeyCode.UpArrow))) * velocidad));
@@ -66,15 +66,9 @@ public class ScriptPlayer : MonoBehaviour
         }
     }
 
-    public void SetPlayer(Player p)
+    public void SetPlayer(Enumerations.Player p)
     {
         currentPlayer = p;
-    }
-
-    public enum Player
-    {
-        Player_1,
-        Player_2
     }
 
     IEnumerator SlowDownCoroutine(float slowF)
