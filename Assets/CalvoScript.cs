@@ -9,6 +9,7 @@ public class CalvoScript : MonoBehaviour
     private Vector3 target;
     private uint furiousLevel;
     private bool isPursuit;
+    private int playersIn = 0;
 
     public BoxCollider visionCollider;
     private Collision collisionPlayer;
@@ -42,33 +43,40 @@ public class CalvoScript : MonoBehaviour
         if (other.transform.CompareTag("Player"))
         {
             target = other.transform.position;
+            playersIn++;
             isPursuit = true;
-            Debug.Log("holi");
+            Debug.Log(other.transform.name+" in");
         }
     }
 
     public void OnTriggerExit(Collider other)
     {
-        target = Vector3.zero;
-        isPursuit = false;
-        Debug.Log("holi3");
-    }
-
-    public void OnTriggerStay(Collider other)
-    {
         if (other.transform.CompareTag("Player"))
         {
-            target = other.transform.position;
-            isPursuit = true;
-            Debug.Log("holi2");
-        }
-        else
-        {
             target = Vector3.zero;
-            isPursuit = false;
-            
+            playersIn--;
+            if (playersIn <= 0)
+            {
+                isPursuit = false; 
+            }
+            Debug.Log(other.transform.name + " left");
         }
     }
+
+    //public void OnTriggerStay(Collider other)
+    //{
+    //    if (other.transform.CompareTag("Player"))
+    //    {
+    //        target = other.transform.position;
+    //        isPursuit = true;
+    //    }
+    //    else
+    //    {
+    //        target = Vector3.zero;
+    //        isPursuit = false;
+            
+    //    }
+    //}
 
     public void SetPursuit(bool change)
     {
