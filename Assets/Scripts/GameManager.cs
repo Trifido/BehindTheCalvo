@@ -31,17 +31,27 @@ public class GameManager : MonoBehaviour
         InitializeUI();
     }
 
+    /// <summary>
+    /// Initializes Game Manager
+    /// </summary>
     private void Initialize()
     {
         m_player1Score = 0;
         m_player2Score = 0;
     }
 
+    /// <summary>
+    ///  Initializes UI relation to GM
+    /// </summary>
     private void InitializeUI()
     {
         UIManager.Instance.SetPlayersScores(m_player1Score, m_player2Score);
     }
 
+    /// <summary>
+    /// Called when boss touches a player
+    /// </summary>
+    /// <param name="player"></param>
     public void BossTouchedPlayer(Enumerations.Player player)
     {
         if(m_restartScoreIfBossTouchesPlayer)
