@@ -20,13 +20,15 @@ public class ScriptPlayer : MonoBehaviour
             case Enumerations.Player.Player1:
                 if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
                 {
-                    myNav.Move(new Vector3((-Convert.ToInt32(Input.GetKey(KeyCode.A)) + Convert.ToInt32(Input.GetKey(KeyCode.D))) * velocidad, 0, (-Convert.ToInt32(Input.GetKey(KeyCode.S)) + Convert.ToInt32(Input.GetKey(KeyCode.W))) * velocidad));
+                    //myNav.Move(new Vector3((-Convert.ToInt32(Input.GetKey(KeyCode.A)) + Convert.ToInt32(Input.GetKey(KeyCode.D))) * velocidad, 0, (-Convert.ToInt32(Input.GetKey(KeyCode.S)) + Convert.ToInt32(Input.GetKey(KeyCode.W))) * velocidad));
+                    myNav.SetDestination(transform.position + new Vector3((-Convert.ToInt32(Input.GetKey(KeyCode.A)) + Convert.ToInt32(Input.GetKey(KeyCode.D))) * velocidad, 0, (-Convert.ToInt32(Input.GetKey(KeyCode.S)) + Convert.ToInt32(Input.GetKey(KeyCode.W))) * velocidad));
                 }
                 break;
             case Enumerations.Player.Player2:
                 if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.RightArrow))
                 {
-                    myNav.Move(new Vector3((-Convert.ToInt32(Input.GetKey(KeyCode.LeftArrow)) + Convert.ToInt32(Input.GetKey(KeyCode.RightArrow))) * velocidad, 0, (-Convert.ToInt32(Input.GetKey(KeyCode.DownArrow)) + Convert.ToInt32(Input.GetKey(KeyCode.UpArrow))) * velocidad));
+                    //myNav.Move(new Vector3((-Convert.ToInt32(Input.GetKey(KeyCode.LeftArrow)) + Convert.ToInt32(Input.GetKey(KeyCode.RightArrow))) * velocidad, 0, (-Convert.ToInt32(Input.GetKey(KeyCode.DownArrow)) + Convert.ToInt32(Input.GetKey(KeyCode.UpArrow))) * velocidad));
+                    myNav.SetDestination(transform.position + new Vector3((-Convert.ToInt32(Input.GetKey(KeyCode.LeftArrow)) + Convert.ToInt32(Input.GetKey(KeyCode.RightArrow))) * velocidad, 0, (-Convert.ToInt32(Input.GetKey(KeyCode.DownArrow)) + Convert.ToInt32(Input.GetKey(KeyCode.UpArrow))) * velocidad));
                 }
                 break;
             default:
