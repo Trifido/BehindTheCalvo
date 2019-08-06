@@ -11,7 +11,7 @@ public class CalvoScript : MonoBehaviour
     private bool isPursuit;
     private int playersIn = 0;
 
-    public BoxCollider visionCollider;
+    public Collider visionCollider;
     private Collision collisionPlayer;
 
     public NavMeshAgent navCalvo;
