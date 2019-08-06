@@ -9,7 +9,6 @@ using UnityEngine.UI;
 /// </summary>
 public class UIManager : MonoBehaviour
 {
-
     [SerializeField]
     private Text m_player1ScoreText;
 
@@ -36,13 +35,6 @@ public class UIManager : MonoBehaviour
         }
 
         DontDestroyOnLoad(gameObject);
-    }
-
-    private void Start()
-    {
-        m_timer = new GameTimer();
-
-        InitTimer(90);
     }
 
     private void Update()
@@ -122,8 +114,10 @@ public class UIManager : MonoBehaviour
     /// Begins Timer
     /// </summary>
     /// <param name="seconds"></param>
-    public void InitTimer(float seconds)
+    public void InitTimer(int seconds)
     {
+        m_timer = new GameTimer();
+
         m_timerText.text = seconds.ToString();
         m_timer.Init(seconds);
     }

@@ -1074,6 +1074,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_restartScoreIfBossTouchesPlayer: 1
+  m_timerTime: 90
 --- !u!4 &1502553232
 Transform:
   m_ObjectHideFlags: 0
