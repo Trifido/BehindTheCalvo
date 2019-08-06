@@ -8,6 +8,9 @@ public class GameManager : MonoBehaviour
 
     [SerializeField]
     private bool m_restartScoreIfBossTouchesPlayer = true;
+    
+    [SerializeField]
+    private int m_timerTime = 90;
 
     private float m_player1Score;
 
@@ -46,6 +49,7 @@ public class GameManager : MonoBehaviour
     private void InitializeUI()
     {
         UIManager.Instance.SetPlayersScores(m_player1Score, m_player2Score);
+        UIManager.Instance.InitTimer(m_timerTime);
     }
 
     /// <summary>

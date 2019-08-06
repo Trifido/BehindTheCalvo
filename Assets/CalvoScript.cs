@@ -21,7 +21,6 @@ public class CalvoScript : MonoBehaviour
     {
         //velocity = 0.5f;
         furiousLevel = 0;
-        Debug.Log(navCalvo.speed);
     }
 
     // Update is called once per frame
