@@ -20,6 +20,10 @@ public class Character_Texts : MonoBehaviour
     void SaySomething()
     {
         byte rand = (byte)Random.Range(0, characterTexts.Length);
+        if (rand == characterTexts.Length)
+        {
+            rand = 0;
+        }
 
         textMesh.text = characterName +": "+ characterTexts[rand];
         ShowText();
