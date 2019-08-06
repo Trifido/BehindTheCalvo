@@ -80,4 +80,9 @@ public class GameManager : MonoBehaviour
             // 
         }
     }
+
+    public void GoalReached(Enumerations.Player player)
+    {
+
+    }
 }
