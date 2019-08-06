@@ -26,6 +26,8 @@ public class GameManager : MonoBehaviour
         {
             return;
         }
+
+        DontDestroyOnLoad(gameObject);
     }
 
     private void Start()
