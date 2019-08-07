@@ -151,6 +151,8 @@ MonoBehaviour:
   velocidad: 0.2
   trabajandoBool: 0
   slowedDown: 0
+  playerName: Javi
+  charactersSprite: {fileID: 21300000, guid: fee4e2dd3e9436741b042970e80d6562, type: 3}
   currentPlayer: 0
 --- !u!114 &4145670622030876246
 MonoBehaviour:

@@ -7,7 +7,7 @@ public class SelectCharacter : MonoBehaviour
 {
     int characterSelected;
 
-    public UI_Controller.enumPlayer player;
+    public Enumerations.Player player;
 
     public Text characterText;
     public Image characterImage;
@@ -21,7 +21,7 @@ public class SelectCharacter : MonoBehaviour
     {
         switch (player)
         {
-            case UI_Controller.enumPlayer.Player1:
+            case Enumerations.Player.Player1:
                 if (Input.GetKeyUp(KeyCode.A))
                 {
                     ChangeCharacter(-1);
@@ -35,7 +35,7 @@ public class SelectCharacter : MonoBehaviour
                     SetCharacter();
                 }
                 break;
-            case UI_Controller.enumPlayer.Player2:
+            case Enumerations.Player.Player2:
                 if (Input.GetKeyUp(KeyCode.LeftArrow))
                 {
                     ChangeCharacter(-1);
@@ -57,16 +57,16 @@ public class SelectCharacter : MonoBehaviour
     public void ChangeCharacter(int dir)
     {
         characterSelected = characterSelected + dir;
-        if (characterSelected > UI_Controller.instance.charactersName.Length-1)
+        if (characterSelected > GameManager.Instance.Players.Length-1)
         {
             characterSelected = 0;
         }
         else if (characterSelected < 0)
         {
-            characterSelected = UI_Controller.instance.charactersName.Length - 1;
+            characterSelected = GameManager.Instance.Players.Length - 1;
         }
-        characterText.text = UI_Controller.instance.charactersName[characterSelected];
-        characterImage.sprite = UI_Controller.instance.charactersSprite[characterSelected];
+        characterText.text = GameManager.Instance.Players[characterSelected].playerName;
+        characterImage.sprite = GameManager.Instance.Players[characterSelected].charactersSprite;
     }
 
     public void SetCharacter()
@@ -75,8 +75,4 @@ public class SelectCharacter : MonoBehaviour
         gameObject.SetActive(false);
         UI_Controller.instance.SetReady(player);
     }
-
-
-    
-
 }

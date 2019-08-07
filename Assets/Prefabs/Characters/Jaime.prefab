@@ -151,6 +151,8 @@ MonoBehaviour:
   velocidad: 0.2
   trabajandoBool: 0
   slowedDown: 0
+  playerName: Jaime
+  charactersSprite: {fileID: 21300000, guid: 53a6494df21344346bc088ceab19273a, type: 3}
   currentPlayer: 0
 --- !u!114 &4145670622030876246
 MonoBehaviour:

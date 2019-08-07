@@ -16,20 +16,20 @@ public class UI_Controller : MonoBehaviour
     }
     #endregion
 
-    public string[] charactersName;
-    public Sprite[] charactersSprite;
+    //public string[] charactersName;
+    //public Sprite[] charactersSprite;
 
     bool P1_Ready;
     bool P2_Ready;
 
-    public void SetReady(enumPlayer player)
+    public void SetReady(Enumerations.Player player)
     {
         switch (player)
         {
-            case enumPlayer.Player1:
+            case Enumerations.Player.Player1:
                 P1_Ready = true;
                 break;
-            case enumPlayer.Player2:
+            case Enumerations.Player.Player2:
                 P2_Ready = true;
                 break;
             default:
@@ -41,16 +41,10 @@ public class UI_Controller : MonoBehaviour
         }
     }
 
-
-    public enum enumPlayer
-    {
-        Player1,
-        Player2
-    }
-
     IEnumerator startGameCoroutine()
     {
         yield return new WaitForSeconds(3f);
-        SceneManager.LoadScene(1);
+        //SceneManager.LoadScene(1);
+        GameManager.Instance.GoToGameplayScene();
     }
 }

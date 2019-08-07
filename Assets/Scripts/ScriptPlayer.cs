@@ -11,6 +11,10 @@ public class ScriptPlayer : MonoBehaviour
     public bool trabajandoBool;
     public bool slowedDown;
 
+    public string playerName;
+
+    public Sprite charactersSprite;
+
     public Enumerations.Player currentPlayer;
 
     private void Update()

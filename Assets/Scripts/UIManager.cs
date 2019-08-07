@@ -33,14 +33,15 @@ public class UIManager : MonoBehaviour
         {
             return;
         }
-
-        DontDestroyOnLoad(gameObject);
     }
 
     private void Update()
     {
-        m_timer.UpdateTimer();
-        m_timerText.text = ((int)m_timer.GetTime()).ToString();
+        if (m_timer != null)
+        {
+            m_timer.UpdateTimer();
+            m_timerText.text = ((int)m_timer.GetTime()).ToString(); 
+        }
     }
 
     /// <summary>

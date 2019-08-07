@@ -191,6 +191,75 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 60675168}
   m_CullTransparentMesh: 0
+--- !u!1001 &98326302
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6908331858894956837, guid: ffde0776f5c7e7e44b42db267967c459,
+        type: 3}
+      propertyPath: m_Name
+      value: GameManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 6908331858894956859, guid: ffde0776f5c7e7e44b42db267967c459,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.9413667
+      objectReference: {fileID: 0}
+    - target: {fileID: 6908331858894956859, guid: ffde0776f5c7e7e44b42db267967c459,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.618684
+      objectReference: {fileID: 0}
+    - target: {fileID: 6908331858894956859, guid: ffde0776f5c7e7e44b42db267967c459,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 4.74873
+      objectReference: {fileID: 0}
+    - target: {fileID: 6908331858894956859, guid: ffde0776f5c7e7e44b42db267967c459,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6908331858894956859, guid: ffde0776f5c7e7e44b42db267967c459,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6908331858894956859, guid: ffde0776f5c7e7e44b42db267967c459,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6908331858894956859, guid: ffde0776f5c7e7e44b42db267967c459,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6908331858894956859, guid: ffde0776f5c7e7e44b42db267967c459,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6908331858894956859, guid: ffde0776f5c7e7e44b42db267967c459,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6908331858894956859, guid: ffde0776f5c7e7e44b42db267967c459,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6908331858894956859, guid: ffde0776f5c7e7e44b42db267967c459,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ffde0776f5c7e7e44b42db267967c459, type: 3}
 --- !u!1 &139248013
 GameObject:
   m_ObjectHideFlags: 0
@@ -1643,14 +1712,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7c2b40c74e7cce4fb5c557f2f50ba37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  charactersName:
-  - Jaime
-  - Javi
-  - Vicente
-  charactersSprite:
-  - {fileID: 21300000, guid: 53a6494df21344346bc088ceab19273a, type: 3}
-  - {fileID: 21300000, guid: fee4e2dd3e9436741b042970e80d6562, type: 3}
-  - {fileID: 21300000, guid: e6e320dca729599459df680b492b0edc, type: 3}
 --- !u!114 &1608192730
 MonoBehaviour:
   m_ObjectHideFlags: 0
