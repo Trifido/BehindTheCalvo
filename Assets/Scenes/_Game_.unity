@@ -1114,6 +1114,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 600172151954117749, guid: 47d3f4bb30bbce5418e42a86d583e2f4,
+        type: 3}
+      propertyPath: velocidad
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 600172151954117744, guid: 47d3f4bb30bbce5418e42a86d583e2f4,
         type: 3}
       propertyPath: m_Name
@@ -1173,11 +1178,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 600172151954117749, guid: 47d3f4bb30bbce5418e42a86d583e2f4,
-        type: 3}
-      propertyPath: velocidad
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47d3f4bb30bbce5418e42a86d583e2f4, type: 3}
@@ -1265,6 +1265,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 600172151954117749, guid: 6625a743fe2b2824e9d6e58d19928e9c,
+        type: 3}
+      propertyPath: currentPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 600172151954117749, guid: 6625a743fe2b2824e9d6e58d19928e9c,
+        type: 3}
+      propertyPath: velocidad
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 600172151954117744, guid: 6625a743fe2b2824e9d6e58d19928e9c,
         type: 3}
       propertyPath: m_Name
@@ -1324,16 +1334,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 600172151954117749, guid: 6625a743fe2b2824e9d6e58d19928e9c,
-        type: 3}
-      propertyPath: currentPlayer
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 600172151954117749, guid: 6625a743fe2b2824e9d6e58d19928e9c,
-        type: 3}
-      propertyPath: velocidad
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 600172151954117746, guid: 6625a743fe2b2824e9d6e58d19928e9c,
         type: 3}
@@ -1430,7 +1430,7 @@ PrefabInstance:
     - target: {fileID: 3490445784196652172, guid: 5d25afdb779a8f4409e0c925a77c16ec,
         type: 3}
       propertyPath: m_Name
-      value: Calvo
+      value: Boss
       objectReference: {fileID: 0}
     - target: {fileID: 3490445784196652168, guid: 5d25afdb779a8f4409e0c925a77c16ec,
         type: 3}
